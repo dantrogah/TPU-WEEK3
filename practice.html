@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Navbar</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+      .navbar {
+        background-color: #333;
+        padding: 10px 20px;
+      }
+      .navbar ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+      }
+      .navbar li {
+        padding: 10px;
+      }
+      .navbar a {
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+        transition: color 0.3s ease;
+      }
+      .navbar a:hover {
+        color: #ff9800;
+      }
+
+      @media (max-width: 600px) {
+        .navbar ul {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>
