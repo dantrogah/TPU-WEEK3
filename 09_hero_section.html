@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hero Section Design</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Hero Section */
+      .hero {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-image: url("./images/techmain.jpg");
+        background-position: center;
+        background-size: cover;
+        color: #fff;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+      }
+
+      .hero_content {
+        position: relative;
+        max-width: 80%;
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+      }
+
+      .hero p {
+        font-size: 1.5rem;
+      }
+
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 2rem;
+        }
+
+        .hero p {
+          font-size: 1.2rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .hero h1 {
+          font-size: 1.8rem;
+        }
+
+        .hero p {
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hero">
+      <div class="hero_content">
+        <h1>Welcome to Our Tech Event</h1>
+        <p>Join us for an inspiring experience</p>
+      </div>
+    </div>
+  </body>
+</html>

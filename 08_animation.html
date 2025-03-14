@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #f4f4f4;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      /* Button Animation */
+      @keyframes buttonHover {
+        0% {
+          transform: scale(1);
+          background: #007bff;
+        }
+
+        50% {
+          transform: scale(1.1);
+          background: #0056b3;
+        }
+
+        100% {
+          transform: scale(1);
+          background: #007bff;
+        }
+      }
+
+      .btn {
+        padding: 12px 24px;
+        background: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 18px;
+        transition: all 0.3s;
+      }
+
+      .btn:hover {
+        animation: buttonHover 0.5s ease-in-out;
+      }
+
+      @keyframes linkHover {
+        0% {
+          color: #007bff;
+          letter-spacing: 0px;
+        }
+
+        100% {
+          color: #0056b3;
+          letter-spacing: 2px;
+        }
+      }
+
+      .link {
+        text-decoration: none;
+        font-size: 18px;
+        color: #007bff;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .link:hover {
+        animation: linkHover 0.3s ease-in-out forwards;
+      }
+
+      @keyframes iconSpin {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .icon {
+        font-size: 30px;
+        display: inline-block;
+        cursor: pointer;
+      }
+
+      .icon:hover {
+        animation: iconSpin 0.5s ease-in-out;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="btn">Hover Me</button>
+    <a href="#" class="link">Hover Over This Link</a>
+    <span class="icon">🔥</span>
+  </body>
+</html>
