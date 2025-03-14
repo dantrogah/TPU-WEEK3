@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic Grid Setup</title>
+    <style>
+      h1 {
+        text-align: center;
+      }
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, auto);
+        gap: 10px;
+        max-width: 800px;
+        margin: auto;
+        padding: 20px;
+      }
+
+      .grid-item {
+        padding: 15px;
+        border: 1px solid #ccc;
+        margin: 10px;
+      }
+
+      .grid-item--one {
+        grid-column: span 2;
+        grid-row: span 2;
+      }
+
+      @media (max-width: 650px) {
+        .grid-container {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 450px) {
+        .grid-container {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>CSS Grid Example</h1>
+    </header>
+    <div class="grid-container">
+      <div class="grid-item grid-item--one">
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque
+          maxime vel aliquam, illum iste consequuntur asperiores fugit iusto
+          libero nihil enim, vitae atque earum nisi.
+        </p>
+      </div>
+      <div class="grid-item">
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque
+          maxime vel aliquam, illum iste consequuntur asperiores fugit iusto
+          libero nihil enim, vitae atque earum nisi.
+        </p>
+      </div>
+      <div class="grid-item">
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque
+          maxime vel aliquam, illum iste consequuntur asperiores fugit iusto
+          libero nihil enim, vitae atque earum nisi.
+        </p>
+      </div>
+      <div class="grid-item">
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque
+          maxime vel aliquam, illum iste consequuntur asperiores fugit iusto
+          libero nihil enim, vitae atque earum nisi.
+        </p>
+      </div>
+      <div class="grid-item">
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque
+          maxime vel aliquam, illum iste consequuntur asperiores fugit iusto
+          libero nihil enim, vitae atque earum nisi.
+        </p>
+      </div>
+      <div class="grid-item">
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque
+          maxime vel aliquam, illum iste consequuntur asperiores fugit iusto
+          libero nihil enim, vitae atque earum nisi.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
