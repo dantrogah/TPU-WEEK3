@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi Column</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.5;
+        background: #f8f9fa;
+        width: 80%;
+        margin: 0 auto;
+      }
+
+      h1,
+      h2 {
+        text-align: center;
+        margin: 10px;
+      }
+
+      .content,
+      .aside {
+        background: #fff;
+        padding: 20px;
+        border-radius: 4px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        /* padding: 20px; */
+      }
+
+      .content {
+        flex: 2;
+      }
+
+      .aside {
+        flex: 1;
+        /* text-align: left; */
+      }
+
+      @media (max-width: 600px) {
+        .container {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Blog Title</h1>
+    <div class="container">
+      <div class="content">
+        <h2>Learning to Code</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum omnis
+          saepe velit libero perferendis accusamus.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem delectus
+          omnis libero necessitatibus obcaecati, eum dignissimos sit sint dolor
+          perferendis.
+        </p>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum odit
+          molestiae explicabo obcaecati, quam esse voluptatum!
+        </p>
+      </div>
+      <div class="aside">
+        <h2>Studies Schedules</h2>
+        <ul>
+          <li>Lorem ipsum dolor sit amet.</li>
+          <li>Lorem ipsum dolor sit.</li>
+          <li>Lorem ipsum dolor sit amet consectetur.</li>
+          <li>Lorem ipsum dolor sit amet.</li>
+          <li>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, iste
+            sed?
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
