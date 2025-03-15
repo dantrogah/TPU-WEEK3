@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Centered Grid Item</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Grid Container */
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+        grid-template-rows: repeat(2, 150px); /* Two equal rows */
+        gap: 15px; /* Space between grid items */
+        padding: 20px;
+        max-width: 600px;
+        margin: auto;
+      }
+
+      /* Grid Items */
+      .grid-item {
+        background-color: #007bff;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        font-size: 1.5rem;
+        border-radius: 8px;
+        border: 2px solid #0056b3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* Center Align Item 3 */
+      .grid-item:nth-child(3) {
+        justify-self: center; /* Centers horizontally */
+        align-self: center; /* Centers vertically */
+        background-color: #ff5733; /* Different color for visibility */
+        width: 20px;
+        height: 20px;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 600px) {
+        .grid-container {
+          grid-template-columns: repeat(2, 1fr); /* Two columns */
+          grid-template-rows: repeat(3, 150px);
+        }
+      }
+
+      @media (max-width: 400px) {
+        .grid-container {
+          grid-template-columns: 1fr; 
+          grid-template-rows: repeat(6, 100px); 
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="grid-item">1</div>
+      <div class="grid-item">2</div>
+      <div class="grid-item">3</div>
+      <div class="grid-item">4</div>
+      <div class="grid-item">5</div>
+      <div class="grid-item">6</div>
+    </div>
+  </body>
+</html>
